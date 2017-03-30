@@ -1,0 +1,12 @@
+{% extends "../templates/base.html" %}
+
+{%block title%} Lista de árvores{%endblock%}
+
+{%block body%}
+
+  <ul>
+    {%for tree in tree_list%}
+    <li><a href="{{tree.id}}"/>{{tree.specie|upper}}</a></li>
+    {%endfor%}
+  </ul>
+{%endblock%}
